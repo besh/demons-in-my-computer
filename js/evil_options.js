@@ -41,7 +41,6 @@
     localStorage.clear();
     $checkbox.removeAttr('checked');
     checkStorage();
-    console.log(localStorage)
   }
 
   // Check local storage and display appropriate message about demons
@@ -50,7 +49,6 @@
     // Add checked attr to those in local storage on page load
     if (loadCheck < 1 && localStorage.length) {
       $.each(localStorage, function(name) {
-        console.log(name)
         $('[name="' + name + '"]').attr('checked', true);
       });
 
