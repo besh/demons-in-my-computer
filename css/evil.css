@@ -1,0 +1,59 @@
+.demon-rotate {
+  -webkit-transform: rotate(0.5deg);
+  -ms-transform: rotate(0.5deg);
+  transform: rotate(0.5deg);
+}
+
+.demon-invert {
+  -webkit-transform: scale(-1);
+  -ms-transform: scale(-1);
+  transform: scale(-1);
+}
+
+.demon-long-animation {
+  transition: all 4000s;
+}
+
+.demon-rotate-major {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.demon-modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  background: white;
+  box-shadow: 0 2px 4px #333;
+  z-index: 9999;
+  padding: 20px;
+  font-size: 12px;
+  display: none;
+  height: 200px;
+}
+
+.demon-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background: #428bca;
+}
+
+.demon-overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.8;
+  z-index: 5000;
+}

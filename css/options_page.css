@@ -1,0 +1,129 @@
+body {
+  background: #373b43;
+  color: white;
+  margin: 0;
+}
+
+@font-face {
+    font-family: 'little_trouble_girl_bvregular';
+    src: url('littletroublegirl-webfont.eot');
+    src: url('littletroublegirl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('littletroublegirl-webfont.woff') format('woff'),
+         url('littletroublegirl-webfont.ttf') format('truetype'),
+         url('littletroublegirl-webfont.svg#little_trouble_girl_bvregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.options {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+}
+
+h1 {
+  background: #111;
+  margin: 0;
+  padding: 20px;
+  font-family: 'little_trouble_girl_bvregular';
+  font-size: 30px;
+}
+
+h2 {
+  text-transform: uppercase;
+  border-bottom: 1px dotted;
+  color: aqua;
+}
+
+.demon-img {
+  background: url('../img/demon-bg.png') no-repeat bottom center;
+  position: fixed;
+  bottom: 0;
+  background-size: 70%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+label {
+  padding: 8px 0;
+  font-size: 16px;
+  display: block;
+}
+
+.custom-field {
+  display: none;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+button {
+  width: 200px;
+  height: 45px;
+  background: #b94152;
+  border: 2px solid #842431;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #222;
+  transition: .23s all;
+  outline: none;
+}
+
+#save {
+  background: url('../img/skull.png') no-repeat right 10px center #b94152;
+  background-size: 24px;
+}
+
+button:hover, #save:hover {
+  background-color: crimson;
+}
+
+.demon-message {
+  margin: 20px 0;
+  background: white;
+  padding: 12px;
+  color: #333;
+  border-radius: 5px;
+  transition: .5s all;
+  font-size: 18px;
+  display: inline-block;
+  font-size: bold;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-family: 'helvetica, arial, sans-serif';
+}
+
+.demon-message.has-demons {
+  background: crimson;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'little_trouble_girl_bvregular';
+  animation: shake 1s;
+  -webkit-animation: shake 1s;
+}
+
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}

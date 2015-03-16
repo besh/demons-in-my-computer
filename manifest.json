@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Demons in my computer",
+  "description": "Unleash evil on someone elses computer.",
+  "version": "0.1",
+  "options_page": "evil_options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["css/evil.css"],
+      "js": ["js/jquery.js", "js/evil.js"]
+    }
+  ]
+}

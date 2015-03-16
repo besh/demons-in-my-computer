@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Evil Options</title>
+    <link rel="stylesheet" href="css/options_page.css">
+  </head>
+
+  <body id="demon-options-page">
+    <!-- TODO: Load options from json file -->
+    <h1>Demons in my computer</h1>
+    <section class="options">
+      <div class="grid">
+        <div>
+          <h2>Quick Demons</h2>
+          <label>
+            <input type="checkbox" name="hassel_direct">
+            Hasseldirect
+          </label>
+
+          <label>
+            <input type="checkbox" name="delete_dom">
+            Bye Bye DOM
+          </label>
+
+          <label>
+           <input type="checkbox" name="invert_page">
+            Invert Page
+          </label>
+
+          <label>
+            <input type="checkbox" name="rotate_images" class="subtle">
+            Rotate Images Slightly
+          </label>
+
+          <label>
+            <input type="checkbox" name="play_creed">
+            Play Creed
+          </label>
+
+          <label>
+            <input type="checkbox" name="remove_vowels">
+            Remove Vowels
+          </label>
+
+          <label>
+            <input type="checkbox" name="rotate_overtime" class="subtle">
+            Rotate Page Overtime
+          </label>
+
+          <label>
+            <input type="checkbox" name="input_alerts" class="subtle">
+            Input keyup alerts
+          </label>
+
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="save">Spawn Demons</button>
+        <button id="reset">Cast out Demons</button>
+      </div>
+
+      <p class="demon-message"></p>
+    </section>
+
+   <!--  <h2>Custom Demons</h2>
+    <label>
+      <input type="checkbox" name="replace_words" data-id="replace-words">
+      Replace words
+    </label>
+    <div class="custom-field" id="replace-words">
+      <label>Replace</label>
+      <input type="text" name="word_to_replace">
+      <label>With</label>
+      <input type="text" name="replace_with">
+    </div>
+ -->
+
+
+    <div class="demon-img"></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/evil_options.js"></script>
+  </body>
+</html>
