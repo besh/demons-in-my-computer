@@ -1,5 +1,5 @@
 # Demons In My Computer
-> Unlocked computer? Unlock the gates to hell!. A chrome extension that allows you to torture souls who left their computer unlocked.
+> Unlocked computer? Unlock the gates to hell! A chrome extension that allows you to torture souls who left their computer unlocked.
 
 ### Setup
 1. Download this repo
