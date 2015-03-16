@@ -16,6 +16,12 @@ body {
 
 }
 
+.logo {
+  background: url('../img/logo.png') no-repeat left 20px center #292622;
+  background-size: 220px;
+  height: 80px;
+}
+
 .options {
   position: relative;
   z-index: 1;
@@ -27,6 +33,10 @@ body {
   display: flex;
 }
 
+.grid > div {
+  margin-right: 30px;
+}
+
 h1 {
   background: #111;
   margin: 0;
@@ -36,9 +46,11 @@ h1 {
 }
 
 h2 {
-  text-transform: uppercase;
+  font-weight: normal;
   border-bottom: 1px dotted;
-  color: aqua;
+  color: #ababab;
+  font-family: 'little_trouble_girl_bvregular';
+  font-size: 28px;
 }
 
 .demon-img {
@@ -71,13 +83,14 @@ button {
   background: #b94152;
   border: 2px solid #842431;
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   margin-right: 10px;
   text-align: left;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #222;
   transition: .23s all;
   outline: none;
+  font-family: 'little_trouble_girl_bvregular';
 }
 
 #save {
@@ -100,9 +113,10 @@ button:hover, #save:hover {
   display: inline-block;
   font-size: bold;
   position: absolute;
-  top: -20px;
+  bottom: 0px;
   right: 0;
   font-family: 'helvetica, arial, sans-serif';
+  z-index: 3000;
 }
 
 .demon-message.has-demons {

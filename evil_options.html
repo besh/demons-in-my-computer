@@ -7,11 +7,11 @@
 
   <body id="demon-options-page">
     <!-- TODO: Load options from json file -->
-    <h1>Demons in my computer</h1>
+    <div class="logo"></div>
     <section class="options">
       <div class="grid">
         <div>
-          <h2>Quick Demons</h2>
+          <h2>Instant Demons</h2>
           <label>
             <input type="checkbox" name="hassel_direct">
             Hasseldirect
@@ -41,7 +41,11 @@
             <input type="checkbox" name="remove_vowels">
             Remove Vowels
           </label>
+        </div>
 
+
+        <div>
+          <h2>"Wait for it" Demons</h2>
           <label>
             <input type="checkbox" name="rotate_overtime" class="subtle">
             Rotate Page Overtime
@@ -56,8 +60,9 @@
             <input type="checkbox" name="lower_contrast" class="subtle">
             Lower Contrast Overtime
           </label>
-
         </div>
+
+
       </div>
 
       <div class="buttons">
@@ -65,9 +70,8 @@
         <button id="reset">Cast out Demons</button>
       </div>
 
-      <p class="demon-message"></p>
     </section>
-
+    <p class="demon-message"></p>
    <!--  <h2>Custom Demons</h2>
     <label>
       <input type="checkbox" name="replace_words" data-id="replace-words">
