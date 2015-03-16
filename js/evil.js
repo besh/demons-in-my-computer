@@ -67,7 +67,10 @@ function openHellGate(demon) {
     var $demonOverlay = $('.demon-overlay');
 
     $('input[type="text"]').on('keyup', function() {
-      $demonModal.find('.content').text($(this).val());
+      var $this = $(this);
+
+      $this.blur();
+      $demonModal.find('.content').text($this.val());
       $demonModal.show();
       $demonOverlay.show();
     });
