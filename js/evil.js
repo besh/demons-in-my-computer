@@ -35,7 +35,10 @@ function openHellGate(demon) {
 
   // Play Creed. I'm sorry.
   if (demon.play_creed) {
-    $body.html('<iframe width="420" height="315" src="https://www.youtube.com/embed/tHgosv5e5aM?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+    $body
+      .append('<iframe class="demon-creed" width="0" height="0" src="https://www.youtube.com/embed/tHgosv5e5aM?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+      .find('.demon-creed')
+      .css('opacity', '0');
   }
 
   // Remove All Vowels
