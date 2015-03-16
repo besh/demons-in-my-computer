@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Demons in my computer",
   "description": "Unleash evil on someone elses computer.",
-  "version": "0.1",
+  "version": "0.2.1",
   "options_page": "evil_options.html",
   "content_scripts": [
     {
