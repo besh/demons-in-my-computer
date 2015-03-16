@@ -14,10 +14,19 @@
   transition: all 4000s;
 }
 
+.demon-medium-animation {
+  transition: all 120s;
+}
+
 .demon-rotate-major {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.demon-lower-contrast {
+  background: white !important;
+  color: #efefef !important;
 }
 
 .demon-modal {

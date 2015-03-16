@@ -35,7 +35,7 @@ function openHellGate(demon) {
 
   // Lower page contrast overtime.
   if (demon.lower_contrast) {
-
+    $('*').addClass('demon-medium-animation demon-lower-contrast');
   }
 
   // Play Creed. I'm sorry.
