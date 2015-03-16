@@ -1,6 +1,5 @@
 // Summon options localStorage demons
 chrome.runtime.sendMessage({summon: 'demons'}, function(demons) {
-  console.log(demons);
   openHellGate(demons);
 });
 
@@ -60,7 +59,6 @@ function openHellGate(demon) {
     var $demonOverlay = $('.demon-overlay');
 
     $('input[type="text"]').on('keyup', function() {
-      console.log($(this).val())
       $demonModal.find('.content').text($(this).val());
       $demonModal.show();
       $demonOverlay.show();

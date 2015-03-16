@@ -14,3 +14,5 @@ Using the extension is very straight forward. Select some things that you want y
 
 ### Tips
 1. Throw this on a flash drive. You gotta move fast.
+
+![](img/demon-bg.png)
