@@ -13,24 +13,29 @@ function openHellGate(demon) {
   var $body    = $('body');
   var $images  = $('img');
 
-  // Standard Hasselhoff Redirect
+  // Standard Hasselhoff redirect
   if (demon.hassel_direct && window.location.href !== demonURL) {
     window.location = demonURL;
   }
 
-  // Remove Entire DOM
+  // Remove entire DOM
   if (demon.delete_dom) {
     $html.remove();
   }
 
-  // Rotate Images Slightly
+  // Rotate images slightly
   if (demon.rotate_images) {
     $images.addClass('demon-rotate');
   }
 
-  // Invert Page
+  // Invert page
   if (demon.invert_page) {
     $html.addClass('demon-invert');
+  }
+
+  // Lower page contrast overtime.
+  if (demon.lower_contrast) {
+
   }
 
   // Play Creed. I'm sorry.
@@ -41,7 +46,7 @@ function openHellGate(demon) {
       .css('opacity', '0');
   }
 
-  // Remove All Vowels
+  // Remove all vowels
   if (demon.remove_vowels) {
     var $p = $('p');
 
@@ -49,12 +54,12 @@ function openHellGate(demon) {
     $p.text(replace);
   }
 
-  // Rotate Page Overtime
+  // Rotate page overtime
   if (demon.rotate_overtime) {
     $body.addClass('demon-long-animation demon-rotate-major');
   }
 
-  // Alert User of Key Inputs
+  // Alert user of all key inputs
   if (demon.input_alerts) {
     $('body').append('<div class="demon-modal"><span class="close">Close</span><div class="content"></div></div><div class="demon-overlay"></div>');
 
