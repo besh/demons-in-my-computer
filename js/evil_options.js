@@ -14,25 +14,24 @@
 
       if ($this.is(':checked')) {
         localStorage[$this.attr('name')] = $this.val();
+
+        // TODO: Fix custom fields
+        if ($this.attr('data-id')) {
+          var $id  = $('#' + $this.data('id'));
+          var obj  = {};
+          var customFields = $id.find('input').each(function() {
+            var $input = $(this);
+            var key    = $input.attr('name');
+            var value  = $input.val();
+
+            obj[key] = value;
+          });
+
+          localStorage[$this.attr('name')].value = 'butts'
+          console.log(localStorage)
+        }
       }
-
-      // TODO: Fix custom fields
-      // if ($this.attr('data-id')) {
-      //   var $id  = $('#' + $this.data('id'));
-      //   var obj  = {};
-      //   var customFields = $id.find('input').map(function() {
-      //     var $input = $(this);
-      //     var key    = $input.attr('name');
-      //     var value  = $input.val();
-      //     var ret    = {}
-
-      //     ret[key] = value;
-      //     return ret;
-      //   });
-      //   localStorage[$this.attr('name')] = customFields;
-      // }
     });
-
     checkStorage();
   }
 
