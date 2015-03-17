@@ -33,6 +33,7 @@
       }
     });
     checkStorage();
+    console.log('asdf')
   }
 
   // Get rid of dem demons
