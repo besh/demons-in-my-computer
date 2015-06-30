@@ -1,5 +1,6 @@
 (function($) {
   var $checkbox     = $('input[type="checkbox"]');
+  var $slider       = $('input[type="range"]');
   var $demonMessage = $('.demon-message');
   var loadCheck     = 0;
 
@@ -8,6 +9,12 @@
   // Saves options... errhmm demons to local storage
   function saveOptions() {
     localStorage.clear();
+
+    $slider.each(function () {
+      var $this = $(this);
+      localStorage[$this.attr('name')] = $this.val();
+    })
+
 
     $checkbox.each(function() {
       var $this = $(this);
@@ -40,6 +47,8 @@
   function resetOptions() {
     localStorage.clear();
     $checkbox.removeAttr('checked');
+    $slider.val(100);
+    $slider.closest('label').find('span').text(100);
     checkStorage();
   }
 
@@ -48,8 +57,15 @@
 
     // Add checked attr to those in local storage on page load
     if (loadCheck < 1 && localStorage.length) {
-      $.each(localStorage, function(name) {
-        $('[name="' + name + '"]').attr('checked', true);
+      $.each(localStorage, function(name, value) {
+        var $input = $('[name="' + name + '"]');
+
+        if ($input.is(':checkbox')) {
+          $('[name="' + name + '"]').attr('checked', true);
+        } else if ($input.attr('type') === 'range') {
+          $('[name="' + name + '"]').val(value);
+          $('[name="' + name + '"]').closest('label').find('span').text(value);
+        }
       });
 
       loadCheck++;
@@ -65,6 +81,12 @@
         .removeClass('has-demons');
     }
   }
+
+  // update slider count
+  $slider.on('change', function () {
+    var $this = $(this);
+    $this.closest('label').find('span').text($this.val());
+  });
 
   // Show custom inputs for those that have them
   $checkbox.on('click', function() {

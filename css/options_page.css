@@ -73,6 +73,32 @@ label {
   display: none;
 }
 
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 16px;
+  background-color:  #b94152;
+  border: 1px solid #842431;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: -1px;
+  height: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  background: #373b43
+}
+
+.slider-value {
+  display: block;
+  text-align: center;
+  padding: 8px 0;
+}
+
 .buttons {
   margin: 20px 0;
 }
