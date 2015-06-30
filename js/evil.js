@@ -8,6 +8,12 @@ function openHellGate(demon) {
     return;
   }
 
+  // calculate chance for activation
+  var chanceVal = Math.floor(Math.random() * 100) + 1;
+  if (chanceVal > demon.chance) {
+    return;
+  }
+
   var demonURL = 'https://www.google.com/search?q=david+hasselhoff&espv=2&biw=1440&bih=801&source=lnms&tbm=isch&sa=X&ei=6q8FVeiDIsi6ggTbtoOQCQ&ved=0CAYQ_AUoAQ&dpr=2';
   var $html    = $('html');
   var $body    = $('body');
